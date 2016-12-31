@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>New Todo</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Title</ion-label>
+            <ion-input type="text" [value]="todo.Title" (input)="updateTitle($event)"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Description</ion-label>
+            <ion-textarea [(ngModel)]="todo.Description"></ion-textarea>
+        </ion-item>
+    </ion-list>
+
+    <button ion-button full color="light" class="fixed-bottom" (click)="save(true)">Cancel</button>
+    <button ion-button full color="secondary" class="fixed-bottom align-right" (click)="save()">Save</button>
+</ion-content>
